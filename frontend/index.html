@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blockchain-Enabled Federated AI Framework | Distributed Cyber-Threat Intelligence</title>
+  <meta name="description" content="Decentralized, privacy-preserving intrusion detection system on CICIDS2017 using smart contracts, DP-SGD, and Byzantine defense.">
+  
+  <!-- Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Chart.js for high-performance interactive curves -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="glow-sphere glow-1"></div>
+  <div class="glow-sphere glow-2"></div>
+
+  <!-- Top Navigation Header -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-badge">
+        <span class="pulse-dot"></span>
+        <span class="badge-text">EVM / CONSORTIUM PoA</span>
+      </div>
+      <h1 class="brand-title">
+        <span class="gradient-text">Blockchain-Enabled</span> Federated AI Framework
+      </h1>
+      <p class="brand-subtitle">Distributed Intrusion Intelligence • CICIDS2017 Benchmark • Zero-Trust Architecture</p>
+    </div>
+
+    <div class="header-right">
+      <div class="status-chip" id="ledgerStatusChip">
+        <span class="status-icon">🛡️</span>
+        <div class="status-info">
+          <span class="status-label">LEDGER INTEGRITY</span>
+          <span class="status-value text-emerald" id="ledgerStatusText">Cryptographically Valid</span>
+        </div>
+      </div>
+
+      <div class="status-chip" id="roundCounterChip">
+        <span class="status-icon">🔄</span>
+        <div class="status-info">
+          <span class="status-label">TRAINING ROUND</span>
+          <span class="status-value" id="currentRoundDisplay">Round #0</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="btnExportAudit" class="btn btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Audit Report
+        </button>
+        <button id="btnResetSystem" class="btn btn-outline-danger">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+          Reset
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Container -->
+  <main class="dashboard-content">
+
+    <!-- Three-Tier Visual Architecture Breadcrumb Banner -->
+    <section class="architecture-banner card glassmorphism">
+      <div class="tier-card" id="tier1Card">
+        <div class="tier-header">
+          <span class="tier-badge">TIER 1</span>
+          <h3>Client Layer (Silos)</h3>
+        </div>
+        <div class="tier-body">
+          <span class="tier-item"><span class="dot hospital"></span> Hospital A (EHR / Infiltration)</span>
+          <span class="tier-item"><span class="dot bank"></span> Bank B (PCI-DSS / DDoS)</span>
+          <span class="tier-item"><span class="dot iot"></span> IoT Node C (Edge / Botnet)</span>
+        </div>
+        <div class="tier-footer">
+          <span class="tag">Local PyTorch DNN</span>
+          <span class="tag">DP-SGD Privacy</span>
+        </div>
+      </div>
+
+      <div class="tier-arrow">
+        <span class="arrow-line"></span>
+        <span class="arrow-text">ECDSA Signed SHA-256</span>
+      </div>
+
+      <div class="tier-card" id="tier2Card">
+        <div class="tier-header">
+          <span class="tier-badge tier-badge-sc">TIER 2</span>
+          <h3>Smart Contract & Byzantine Shield</h3>
+        </div>
+        <div class="tier-body">
+          <span class="tier-item">✓ Deterministic FedAvg Contract</span>
+          <span class="tier-item">✓ Cosine Distance Anomaly Filter</span>
+          <span class="tier-item">✓ Anti-Poisoning Slashing</span>
+        </div>
+        <div class="tier-footer">
+          <span class="tag">Solidity EVM</span>
+          <span class="tag">Byzantine-Robust</span>
+        </div>
+      </div>
+
+      <div class="tier-arrow">
+        <span class="arrow-line"></span>
+        <span class="arrow-text">Consensus Proof</span>
+      </div>
+
+      <div class="tier-card" id="tier3Card">
+        <div class="tier-header">
+          <span class="tier-badge tier-badge-ledger">TIER 3</span>
+          <h3>Ledger & Global Model</h3>
+        </div>
+        <div class="tier-body">
+          <span class="tier-item">🔗 Immutable Block Chaining</span>
+          <span class="tier-item">🌲 SHA-256 Merkle Roots</span>
+          <span class="tier-item">📊 SOC Forensic Audit Trail</span>
+        </div>
+        <div class="tier-footer">
+          <span class="tag">15-Class IDS</span>
+          <span class="tag">Tamper-Evident</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Execution Cockpit & Controls -->
+    <section class="cockpit-grid">
+      <!-- Control Panel -->
+      <div class="card glassmorphism control-panel">
+        <div class="panel-header">
+          <h2 class="section-title">
+            <span class="icon">⚙️</span> Federated Training Control Cockpit
+          </h2>
+          <span class="badge badge-accent">Interactive Engine</span>
+        </div>
+
+        <div class="controls-form">
+          <div class="input-group-row">
+            <div class="input-field">
+              <label for="inputEpochs">Local Epochs</label>
+              <select id="inputEpochs" class="custom-select">
+                <option value="1" selected>1 Epoch (Fast Aggregation)</option>
+                <option value="2">2 Epochs</option>
+                <option value="3">3 Epochs</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="inputLr">Learning Rate</label>
+              <select id="inputLr" class="custom-select">
+                <option value="0.005">0.005 (Conservative)</option>
+                <option value="0.008" selected>0.008 (Recommended)</option>
+                <option value="0.015">0.015 (Aggressive)</option>
+              </select>
+            </div>
+
+            <div class="input-field">
+              <label for="selectByzantineMethod">Byzantine Defense</label>
+              <select id="selectByzantineMethod" class="custom-select">
+                <option value="cosine_shield" selected>Cosine Distance Shield</option>
+                <option value="multi_krum">Multi-Krum Filter</option>
+                <option value="trimmed_mean">Coordinate-wise Median</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Feature Toggles -->
+          <div class="toggle-row">
+            <label class="toggle-control">
+              <input type="checkbox" id="toggleDifferentialPrivacy" checked>
+              <span class="toggle-switch"></span>
+              <span class="toggle-label">
+                <strong>Differential Privacy (DP-SGD)</strong>
+                <small class="text-muted">Gradient norm clipping & Gaussian noise</small>
+              </span>
+            </label>
+
+            <label class="toggle-control toggle-danger">
+              <input type="checkbox" id="toggleAdversaryAttack">
+              <span class="toggle-switch"></span>
+              <span class="toggle-label">
+                <strong>Inject Adversarial Attack</strong>
+                <small class="text-muted">Simulate malicious poisoning node</small>
+              </span>
+            </label>
+          </div>
+
+          <!-- Attack Configuration (Conditional) -->
+          <div class="attack-config-panel" id="attackConfigPanel" style="display: none;">
+            <div class="alert alert-warning">
+              <span class="alert-icon">⚠️</span>
+              <div class="alert-content">
+                <strong>Adversarial Threat Injected</strong>: A rogue participant ("Adversary Node X") will submit poisoned gradients. The Tier 2 Smart Contract Byzantine Shield will evaluate update vectors and trigger on-chain slashing.
+              </div>
+            </div>
+            <div class="input-field">
+              <label for="selectAttackType">Attack Vector</label>
+              <select id="selectAttackType" class="custom-select">
+                <option value="sign_flip" selected>Sign-Flipping Attack (Invert Gradients)</option>
+                <option value="gaussian_noise">Extreme Gaussian Noise Poisoning</option>
+                <option value="backdoor">Targeted Backdoor / Bias Shift</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="action-buttons-row">
+            <button id="btnRunSingleRound" class="btn btn-primary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              Execute Round
+            </button>
+            <button id="btnRunFiveRounds" class="btn btn-secondary">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+              Run 3 Rounds
+            </button>
+            <button id="btnVerifyChain" class="btn btn-outline-info">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              Audit Chain Integrity
+            </button>
+            <button id="btnTamperTest" class="btn btn-outline-warning" title="Demonstrate cryptographic tamper detection">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              Simulate Block Tamper
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick KPI Metrics Cards -->
+      <div class="metrics-grid">
+        <div class="metric-card card glassmorphism">
+          <div class="metric-header">
+            <span class="metric-label">GLOBAL ACCURACY</span>
+            <span class="metric-icon text-cyan">🎯</span>
+          </div>
+          <div class="metric-value-row">
+            <span class="metric-value text-cyan" id="metricAccuracy">--%</span>
+            <span class="metric-badge" id="metricAccuracyDelta">Baseline</span>
+          </div>
+          <p class="metric-desc">Tested across 15 CICIDS2017 classes</p>
+        </div>
+
+        <div class="metric-card card glassmorphism">
+          <div class="metric-header">
+            <span class="metric-label">WEIGHTED F1-SCORE</span>
+            <span class="metric-icon text-emerald">📊</span>
+          </div>
+          <div class="metric-value-row">
+            <span class="metric-value text-emerald" id="metricF1">--%</span>
+            <span class="metric-badge badge-emerald" id="metricF1Delta">Balanced</span>
+          </div>
+          <p class="metric-desc">Harmonic mean of precision & recall</p>
+        </div>
+
+        <div class="metric-card card glassmorphism">
+          <div class="metric-header">
+            <span class="metric-label">GLOBAL TEST LOSS</span>
+            <span class="metric-icon text-violet">📉</span>
+          </div>
+          <div class="metric-value-row">
+            <span class="metric-value text-violet" id="metricLoss">--</span>
+            <span class="metric-badge badge-violet">Cross-Entropy</span>
+          </div>
+          <p class="metric-desc">Multi-class classification error</p>
+        </div>
+
+        <div class="metric-card card glassmorphism">
+          <div class="metric-header">
+            <span class="metric-label">PRIVACY GUARANTEE</span>
+            <span class="metric-icon text-amber">🔐</span>
+          </div>
+          <div class="metric-value-row">
+            <span class="metric-value text-amber" id="metricEpsilon">ε = 0.0</span>
+            <span class="metric-badge badge-amber" id="metricDelta">δ = 1e-5</span>
+          </div>
+          <p class="metric-desc">Formal (ε, δ)-DP privacy budget</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Training Analytics & Participating Silos Grid -->
+    <section class="analytics-grid">
+      <!-- Real-Time Convergence Chart -->
+      <div class="card glassmorphism chart-container">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="section-title"><span class="icon">📈</span> Convergence & Training Dynamics</h2>
+            <p class="section-subtitle">Real-time accuracy and cross-entropy loss trajectory across federated rounds</p>
+          </div>
+          <div class="chart-legend-custom">
+            <span class="legend-chip"><span class="legend-dot dot-cyan"></span> Accuracy (%)</span>
+            <span class="legend-chip"><span class="legend-dot dot-violet"></span> Loss</span>
+          </div>
+        </div>
+        <div class="chart-wrapper">
+          <canvas id="convergenceChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Consortium Clients Status Cards -->
+      <div class="card glassmorphism clients-container">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="section-title"><span class="icon">🏢</span> Consortium Participant Silos</h2>
+            <p class="section-subtitle">Heterogeneous Non-IID data distribution as defined in Slide 9</p>
+          </div>
+          <span class="badge badge-emerald" id="activeClientsBadge">3 Active Nodes</span>
+        </div>
+
+        <div class="clients-list" id="clientsList">
+          <!-- Populated dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Intrusion Detection Class Breakdown & Confusion Matrix -->
+    <section class="threat-breakdown-grid">
+      <div class="card glassmorphism">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="section-title"><span class="icon">🛡️</span> CICIDS2017 Intrusion Vectors Detection Rates</h2>
+            <p class="section-subtitle">Benchmark performance across Benign baseline and 14 cyber attack vectors</p>
+          </div>
+          <button id="btnRefreshMatrix" class="btn btn-sm btn-secondary">Refresh Evaluation</button>
+        </div>
+
+        <div class="attack-bars-grid" id="attackBarsGrid">
+          <!-- Populated dynamically with per-class detection accuracy bars -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Blockchain Audit Ledger Explorer -->
+    <section class="ledger-section">
+      <div class="card glassmorphism">
+        <div class="card-header-flex">
+          <div>
+            <h2 class="section-title"><span class="icon">⛓️</span> Permissioned Blockchain Audit Ledger Explorer</h2>
+            <p class="section-subtitle">Cryptographically chained blocks, SHA-256 weight hashes, Merkle roots & smart contract receipts</p>
+          </div>
+          <div class="ledger-stats">
+            <span class="stat-pill"><strong id="blockCountDisplay">1 Block</strong> Mined</span>
+            <span class="stat-pill">Consensus: <strong>Proof-of-Authority</strong></span>
+          </div>
+        </div>
+
+        <div class="blockchain-chain-viewport" id="blockchainChain">
+          <!-- Populated dynamically with block cards and visual link chains -->
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Block Inspection Modal -->
+  <div class="modal-overlay" id="blockModal" style="display: none;">
+    <div class="modal-card card glassmorphism">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalBlockTitle">Block #0 Details</h3>
+        <button class="btn-close" id="btnCloseModal">&times;</button>
+      </div>
+      <div class="modal-body" id="modalBlockContent">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification System -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <footer class="app-footer">
+    <p>A Blockchain-Enabled Federated AI Framework for Secure Distributed Intelligence • Canadian Institute for Cybersecurity (CICIDS2017)</p>
+    <p class="text-muted">Research implementation adhering to GDPR Article 25 (Privacy by Design), HIPAA Security Rule, and IEEE Consortium Standards.</p>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyTorch checkpoints
+*.pt
+*.pth
+
+# Environments & OS files
+.env
+.venv
+env/
+venv/
+ENV/
+.DS_Store
+Thumbs.db
+
+# Scratch and temp files
+check_env.py
+extracted_slides.txt
