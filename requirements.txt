@@ -1,0 +1,15 @@
+# Core Deep Learning & Scientific Computing
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch>=2.2.0
+torchvision>=0.17.0
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+
+# Cryptography & Security
+cryptography>=42.0.0
+
+# Backend Web Framework & Server
+fastapi>=0.110.0
+uvicorn>=0.28.0
+pydantic>=2.6.0
